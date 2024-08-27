@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCC202 - Atividade 9: Mateus Lopes</title>
+</head>
+<body>
+    <main>
+        <h1>DCC202 - Atividade 9: Mateus Lopes</h1>
+        <p>Esta é a página principal tem código JavaScript nela. Você só verá o resultado no console e durante a depuração.</p>
+    </main>
+        <script>
+            let maria = {
+                nome: "maria",
+                qtd: 1,
+                comeu: function(){
+                    maria.qtd--;
+                }
+            };
+            let joao = {
+                nome: "joao",
+                qtd: 2
+            };
+            deJoaoParaMaria();
+            maria.comeu();
+            
+            console.log(`${maria.nome} tem ${maria.qtd} maças!`);
+            console.log(`${joao.nome} tem ${joao.qtd} maças!`);
+
+            function deJoaoParaMaria() {
+                maria.qtd = maria.qtd + joao.qtd;
+                joao.qtd = 0;
+            }
+        </script>
+</body>
+</html>
